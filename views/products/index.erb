@@ -1,1 +1,36 @@
 <h1>Products in stock</h1>
+
+
+<table>
+  <tr>
+    <th>Product</th>
+    <th></th>
+    <th>Description</th>
+    <th></th>
+    <th>Stock Quantity</th>
+    <th></th>
+    <th>Buying cost</th>
+    <th></th>
+    <th>Selling price</th>
+    <th></th>
+    <th>Supplier</th>
+    <th></th>
+    <th>Comments</th>
+  </tr>
+  <% for product in @products %>
+  <tr>
+    <td><%= product.product %></td>
+    <td>|</td>
+    <td><%= product.description %></td>
+    <td>|</td>
+    <td><%= product.stock_quantity %></td>
+    <td>|</td>
+    <td><%= product.buying_cost %></td>
+    <td>|</td>
+    <td><%= product.selling_price %></td>
+    <td>|</td>
+    <td><%= product.supplier_id %></td>
+    <td>|</td>
+  </tr>
+  <% end %>
+</table>

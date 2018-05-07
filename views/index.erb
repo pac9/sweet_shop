@@ -1,3 +1,27 @@
 <h1>Inventory!</h1>
 
 <p>Let's count stock</p>
+
+
+
+<table>
+  <tr>
+    <th>Product</th>
+    <th></th>
+    <th>Stock Quantity</th>
+    <th></th>
+    <th>Supplier</th>
+    <th></th>
+    <th>Comments</th>
+  </tr>
+  <% for product in @products %>
+  <tr>
+    <td><%= product.product %></td>
+    <td>|</td>
+    <td><%= product.stock_quantity %></td>
+    <td>|</td>
+    <td><%= product.supplier_id %></td>
+    <td>|</td>
+  </tr>
+  <% end %>
+</table>
