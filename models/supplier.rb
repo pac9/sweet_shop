@@ -43,11 +43,11 @@ class Supplier
     result = supplier_hashes.map {|supplier_hash| Supplier.new(supplier_hash) }
     return result
   end
-  #
-  # def self.delete_all
-  #   sql = "DELETE FROM suppliers"
-  #   SqlRunner.run( sql )
-  #   end
+
+  def self.delete_all
+    sql = "DELETE FROM suppliers"
+    SqlRunner.run( sql )
+    end
 
 
 end

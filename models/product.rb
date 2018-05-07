@@ -30,24 +30,24 @@ attr_reader :id, :product, :description, :stock_quantity, :buying_cost, :selling
      ($1, $2, $3, $4, $5, $6)
      RETURNING id"
    values = [@product, @description, @stock_quantity, @buying_cost, @selling_price, @supplier_id]
-   supplier = SqlRunner.run(sql, values).first
-   @id = supplier['id'].to_i
+   product = SqlRunner.run(sql, values).first
+   @id = product['id'].to_i
  end
- #
- # def self.all()
- # sql = "SELECT * FROM suppliers"
- # supplier_hashes = SqlRunner.run(sql)
- # return Supplier.map_items(supplier_hashes)
- # end
- #
- # def self.map_items(supplier_hashes)
- # result = supplier_hashes.map {|supplier_hash| Supplier.new(supplier_hash) }
- # return result
- # end
- #
- # def self.delete_all
- # sql = "DELETE FROM suppliers"
- # SqlRunner.run( sql )
- # end
+
+ def self.all()
+ sql = "SELECT * FROM products"
+ product_hashes = SqlRunner.run(sql)
+ return Product.map_items(product_hashes)
+ end
+
+ def self.map_items(product_hashes)
+ result = product_hashes.map {|product_hash| Product.new(product_hash) }
+ return result
+ end
+
+ def self.delete_all
+ sql = "DELETE FROM products"
+ SqlRunner.run( sql )
+ end
 
 end

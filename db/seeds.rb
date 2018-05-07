@@ -2,7 +2,8 @@ require_relative("../models/product.rb")
 require_relative("../models/supplier.rb")
 require("pry-byebug")
 
-# Supplier.delete_all()
+Product.delete_all()
+Supplier.delete_all()
 
 supplier1 = Supplier.new({"name" => "MaKCandy", "telephone_number" => "0131 123 3456"})
 supplier1.save()
