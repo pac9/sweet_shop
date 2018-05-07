@@ -34,6 +34,19 @@ attr_reader :id, :product, :description, :stock_quantity, :buying_cost, :selling
    @id = product['id'].to_i
  end
 
+ def update()
+ sql = "UPDATE products SET product = $1, description = $2, stock_quantity = $3, buying_cost = $4, selling_price = $5, supplier_id = $6 WHERE id = $7"
+ values = [@product, @description, @stock_quantity, @buying_cost, @selling_price, @supplier_id, @id]
+ SqlRunner.run( sql, values )
+ end
+
+ def delete()
+   sql = "DELETE FROM products
+     WHERE id = $1"
+   values = [@id]
+   supplier = SqlRunner.run(sql, values)
+ end
+
  def self.all()
  sql = "SELECT * FROM products"
  product_hashes = SqlRunner.run(sql)

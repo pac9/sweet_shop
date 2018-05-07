@@ -24,14 +24,11 @@ class Supplier
     @id = supplier['id'].to_i
   end
 
-  # def delete()
-  #  sql = "DELETE FROM suppliers
-  #    WHERE id = $1"
-  #  values = [@id]
-  #  supplier = SqlRunner.run(sql, values).first
-  #  @id = supplier['id'].to_i
- # end
-#
+  def update()
+   sql = "UPDATE suppliers SET name = $1, telephone_number = $2 WHERE id = $3"
+    values = [@name, @telephone_number, @id]
+    SqlRunner.run( sql, values )
+  end
 
   def self.all()
     sql = "SELECT * FROM suppliers"
@@ -49,5 +46,12 @@ class Supplier
     SqlRunner.run( sql )
     end
 
+
+     #  def delete()
+     #   sql = "DELETE FROM suppliers
+     #     WHERE id = $1"
+     #   values = [@id]
+     #   supplier = SqlRunner.run(sql, values)
+     # end
 
 end
