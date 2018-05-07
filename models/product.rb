@@ -35,9 +35,19 @@ attr_reader :id, :product, :description, :stock_quantity, :buying_cost, :selling
  end
 
  def update()
- sql = "UPDATE products SET product = $1, description = $2, stock_quantity = $3, buying_cost = $4, selling_price = $5, supplier_id = $6 WHERE id = $7"
- values = [@product, @description, @stock_quantity, @buying_cost, @selling_price, @supplier_id, @id]
- SqlRunner.run( sql, values )
+   sql = "UPDATE products SET product = $1, description = $2, stock_quantity = $3, buying_cost = $4, selling_price = $5, supplier_id = $6 WHERE id = $7"
+   values = [@product, @description, @stock_quantity, @buying_cost, @selling_price, @supplier_id, @id]
+   SqlRunner.run( sql, values )
+ end
+
+
+ def supplier()
+    sql = "SELECT * FROM suppliers WHERE id = $1"
+    values = [@supplier_id]
+    results = SqlRunner.run(sql, values)
+    supplier_data = results.first()
+    supplier = Supplier.new(supplier_data)
+    return supplier
  end
 
  def delete()

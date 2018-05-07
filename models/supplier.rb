@@ -30,6 +30,14 @@ class Supplier
     SqlRunner.run( sql, values )
   end
 
+  def products()
+    sql = "SELECT * FROM products WHERE product_id = $1"
+    values = [@id]
+    results = SqlRunner.run(sql, values)
+    products = results.map{|product| Product.new(product)}
+    return products
+  end
+
   def self.all()
     sql = "SELECT * FROM suppliers"
     supplier_hashes = SqlRunner.run(sql)
