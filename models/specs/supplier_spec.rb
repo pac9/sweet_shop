@@ -6,7 +6,6 @@ class TestSupplier < Minitest::Test
 
   def setup
     options = {"name" => "MaKCandy", "telephone_number" => "0131 123 3456"}
-
     @name = Supplier.new(options)
     @telephone_number = Supplier.new(options)
   end
