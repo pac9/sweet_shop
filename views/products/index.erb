@@ -1,5 +1,8 @@
 <h2>Products in stock</h2>
 
+<li>
+  <a href="/products/add">Add</a>
+</li>
 
 <table>
   <tr>
@@ -33,7 +36,8 @@
 
     <td><a href= "/suppliers"><%= product.supplier.name %></a></td>
 
-    <td><%= p "Out of stock" if product.stock_quantity == 0  %>
+    <td>
+    <%= p "Out of stock" if product.stock_quantity == 0  %>
         <%= p "Low stock" if (product.stock_quantity <= 10) && product.stock_quantity !=0 %>
     </td>
 
