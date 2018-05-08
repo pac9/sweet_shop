@@ -1,11 +1,13 @@
-<h2>Inventory</h2>
+<h2>Snapshot</h2>
 
 
 <table>
   <tr>
     <th>Product</th>
 
-    <th>Stock Quantity</th>
+    <th>Stock</th>
+
+    <th>Buying cost</th>
 
     <th>Supplier</th>
 
@@ -19,11 +21,13 @@
 
     <td><%= product.stock_quantity %></td>
 
+    <td><%= product.buying_cost/100.round(2) %></td>
+
     <td><%= product.supplier.name %></td>
 
     <td><%= product.supplier.telephone_number %></td>
     <% end %>
 
   </tr>
-  
+
 </table>
