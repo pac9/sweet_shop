@@ -10,6 +10,7 @@
   <tr>
     <td><%= supplier.name %></td>
     <td><a href="tel:<%= supplier.telephone_number %>"><%= supplier.telephone_number %></a></td>
+    <td><a href="/suppliers/<%= supplier.id %>/edit">Edit</td>
   </tr>
   <% end %>
 </table>

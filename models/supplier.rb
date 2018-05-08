@@ -2,7 +2,8 @@ require_relative( '../db/sql_runner' )
 
 class Supplier
 
- attr_reader :id, :name, :telephone_number
+ attr_reader :id
+ attr_accessor :name, :telephone_number
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -53,6 +54,14 @@ class Supplier
     sql = "DELETE FROM suppliers"
     SqlRunner.run( sql )
     end
+
+  def self.find(id)
+    sql = "SELECT * FROM suppliers WHERE id = $1"
+    values = [id]
+    supplier = SqlRunner.run( sql, values )
+    result = Supplier.new( supplier.first)
+    return result
+  end
 
 
      #  def delete()
