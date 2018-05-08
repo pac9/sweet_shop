@@ -12,12 +12,12 @@
   <input type="number" name="stock_quantity" id="stock-quantity" value="<%= @product.stock_quantity %>"/>
 
 
-  <label for ="buying-cost">Buying cost:</label>
-  <input type="number" name="buying_cost" id="buying-cost" value="<%= @product.buying_cost/100.round(2) %>"/>
+  <label for ="buying-cost">Buying cost (pence):</label>
+  <input type="number" name="buying_cost" id="buying-cost" value="<%= @product.buying_cost %>"/>
 
 
-  <label for ="selling-price">Selling price:</label>
-  <input type="number" name="selling_price" id="selling-price" value="<%= @product.selling_price/100.round(2) %>"/>
+  <label for ="selling-price">Selling price (pence):</label>
+  <input type="number" name="selling_price" id="selling-price" value="<%= @product.selling_price %>"/>
 
   <label for ="supplier">Supplier:</label>
   <select name="supplier_id" id="supplier">

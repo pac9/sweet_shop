@@ -33,8 +33,8 @@
 
     <td><a href= "/suppliers"><%= product.supplier.name %></a></td>
 
-    <td>
-
+    <td><%= p "Out of stock" if product.stock_quantity == 0  %>
+        <%= p "Low stock" if (product.stock_quantity <= 10) && product.stock_quantity !=0 %>
     </td>
 
     <td><a href="/products/<%= product.id %>/edit">Edit</td>
