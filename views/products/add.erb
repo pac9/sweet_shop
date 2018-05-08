@@ -1,36 +1,31 @@
 
-<form action="/products/add" method="post">
+<form action="/products" method="post">
+
   <label for ="product-name">Product:</label>
-  <input type="text" name="product" id="product-name"
-  />
-  </label>
+  <input type="text" name="product" id="product-name"/>
+
+
   <label for ="description">Description:</label>
-  <input type="text" name="description" id="description"
-  />
-  </label>
+  <input type="text" name="description" id="description"/>
+
 
   <label for ="stock-quantity">Stock:</label>
-  <input type="text" name="stock_quantity" id="stock-quantity"
-  />
-  </label>
+  <input type="number" name="stock_quantity" id="stock-quantity"/>
+
 
   <label for ="buying-cost">Buying cost:</label>
-  <input type="text" name="buying_cost" id="buying-cost"
-  />
-  </label>
+  <input type="number" name="buying_cost" id="buying-cost"/>
+
 
   <label for ="selling-price">Selling price:</label>
-  <input type="text" name="selling_price" id="selling-price"
-  />
-  </label>
+  <input type="number" name="selling_price" id="selling-price"/>
 
-    <label for ="supplier">Supplier:</label>
-    <select name="supplier_id">
+  <label for ="supplier">Supplier:</label>
+  <select name="supplier_id">
      <% for supplier in @suppliers %>
-   <option value="<%= supplier.id>"<%= supplier.name %></option>
+   <option value=<%= supplier.id %>><%= supplier.name %></option>
    <% end %>
-    </select>
-
+  </select>
 
   <input type="submit" value="Submit">
 
