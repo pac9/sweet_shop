@@ -1,16 +1,14 @@
-<h1>Suppliers we use</h1>
+<h2>Suppliers</h2>
 
 
 <table>
   <tr>
     <th>Name</th>
-    <th></th>
     <th>To reorder, call:</th>
   </tr>
   <% for supplier in @suppliers %>
   <tr>
     <td><%= supplier.name %></td>
-    <td>|</td>
     <td><%= supplier.telephone_number %></td>
   </tr>
   <% end %>

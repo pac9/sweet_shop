@@ -1,27 +1,29 @@
-<h1>Inventory!</h1>
-
-<p>Let's count stock</p>
-
+<h2>Inventory</h2>
 
 
 <table>
   <tr>
     <th>Product</th>
-    <th></th>
+
     <th>Stock Quantity</th>
-    <th></th>
+
     <th>Supplier</th>
-    <th></th>
+
+    <th>To reorder, call:</th>
+
     <th>Comments</th>
   </tr>
   <% for product in @products %>
   <tr>
     <td><%= product.product %></td>
-    <td>|</td>
+
     <td><%= product.stock_quantity %></td>
-    <td>|</td>
-    <td><%= product.supplier_id %></td>
-    <td>|</td>
+
+    <td><%= product.supplier.name %></td>
+
+    <td><%= product.supplier.telephone_number %></td>
+    <% end %>
+
   </tr>
-  <% end %>
+  
 </table>
