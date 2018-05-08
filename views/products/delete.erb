@@ -1,0 +1,5 @@
+<p>Delete item: <%= @product.product %> </p>
+
+<form method="post" action="/products/<%= @product.id %>/delete">
+<input type="submit" value="Delete product"/>
+</form>

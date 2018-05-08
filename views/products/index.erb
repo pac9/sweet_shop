@@ -16,6 +16,8 @@
     <th>Supplier</th>
 
     <th>Comments</th>
+
+
   </tr>
   <% for product in @products %>
   <tr>
@@ -30,7 +32,15 @@
     <td><%= product.selling_price/100.round(2) %></td>
 
     <td><a href= "/suppliers"><%= product.supplier.name %></a></td>
+
+    <td>
+
+    </td>
+
     <td><a href="/products/<%= product.id %>/edit">Edit</td>
+
+    <td><a href="/products/<%= product.id %>/delete">Delete</a></td>
+
 
   </tr>
   <% end %>

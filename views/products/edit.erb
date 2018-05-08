@@ -13,13 +13,18 @@
 
 
   <label for ="buying-cost">Buying cost:</label>
-  <input type="number" name="buying_cost" id="buying-cost" value="<%= @product.buying_cost %>"/>
+  <input type="number" name="buying_cost" id="buying-cost" value="<%= @product.buying_cost/100.round(2) %>"/>
 
 
   <label for ="selling-price">Selling price:</label>
-  <input type="number" name="selling_price" id="selling-price" value="<%= @product.selling_price %>"/>
+  <input type="number" name="selling_price" id="selling-price" value="<%= @product.selling_price/100.round(2) %>"/>
 
-  
+  <label for ="supplier">Supplier:</label>
+  <select name="supplier_id" id="supplier">
+     <% for supplier in @supplier %>
+   <option value=<%= supplier.id %>><%= supplier.name %></option>
+   <% end %>
+  </select>
 
   <input type="submit" value="Submit">
 
