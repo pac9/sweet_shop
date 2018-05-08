@@ -17,7 +17,7 @@
   </tr>
   <% for product in @products %>
   <tr>
-    <td><%= product.product %></td>
+    <td><a href="/edit/"><%= product.product %></a></td>
 
     <td><%= product.stock_quantity %></td>
 
@@ -25,7 +25,7 @@
 
     <td><%= product.supplier.name %></td>
 
-    <td><%= product.supplier.telephone_number %></td>
+    <td><%= product.supplier.telephone_number %></a></td>
     <% end %>
 
   </tr>

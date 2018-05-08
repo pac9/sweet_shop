@@ -9,7 +9,7 @@
   <% for supplier in @suppliers %>
   <tr>
     <td><%= supplier.name %></td>
-    <td><%= supplier.telephone_number %></td>
+    <td><a href="tel:<%= supplier.telephone_number %>"><%= supplier.telephone_number %></a></td>
   </tr>
   <% end %>
 </table>

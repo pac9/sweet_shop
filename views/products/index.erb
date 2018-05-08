@@ -29,9 +29,11 @@
 
     <td><%= product.selling_price/100.round(2) %></td>
 
-    <td><%= product.supplier.name %></td>
+    <td><a href= "/suppliers"><%= product.supplier.name %></a></td>
 
   </tr>
   <% end %>
+
+
 
 </table>
