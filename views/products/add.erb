@@ -1,0 +1,37 @@
+
+<form action="/products/add" method="post">
+  <label for ="product-name">Product:</label>
+  <input type="text" name="product" id="product-name"
+  />
+  </label>
+  <label for ="description">Description:</label>
+  <input type="text" name="description" id="description"
+  />
+  </label>
+
+  <label for ="stock-quantity">Stock:</label>
+  <input type="text" name="stock_quantity" id="stock-quantity"
+  />
+  </label>
+
+  <label for ="buying-cost">Buying cost:</label>
+  <input type="text" name="buying_cost" id="buying-cost"
+  />
+  </label>
+
+  <label for ="selling-price">Selling price:</label>
+  <input type="text" name="selling_price" id="selling-price"
+  />
+  </label>
+
+    <label for ="supplier">Supplier:</label>
+    <select name="supplier_id">
+     <% for supplier in @suppliers %>
+   <option value="<%= supplier.id>"<%= supplier.name %></option>
+   <% end %>
+    </select>
+
+
+  <input type="submit" value="Submit">
+
+</form>
