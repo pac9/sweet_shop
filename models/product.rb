@@ -69,6 +69,14 @@ attr_accessor :product, :description, :stock_quantity, :buying_cost, :selling_pr
  return result
  end
 
+ def self.find(id)
+ sql = "SELECT * FROM products WHERE id = $1"
+ values = [id]
+ product = SqlRunner.run( sql, values )
+ result = Product.new( product.first)
+ return result
+ end
+
  def self.delete_all
  sql = "DELETE FROM products"
  SqlRunner.run( sql )

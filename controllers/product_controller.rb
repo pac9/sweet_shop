@@ -19,3 +19,9 @@ post '/products' do
   @product.save()
   redirect to("/products")
 end
+
+get '/products/:id/edit' do
+  @product = Product.find( params[:id] )
+  @supplier = Supplier.all()
+  erb ( :"products/edit")
+end
