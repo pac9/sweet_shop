@@ -16,16 +16,15 @@
       <li>
         <a href="/products">Products</a>
       </li>
-
-
-
       <li>
         <a href="/suppliers">Suppliers</a>
       </li>
-      
-
     </ul>
   </nav>
+  <h1><%t= Time.now %>
+    <%= t.strftime("Status on %d/%m/%Y") %>
+    <%= t.strftime("at %I:%M%p") %>
+  </h1>
   <%= yield %>
 </body>
 </html>
