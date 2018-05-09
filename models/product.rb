@@ -64,7 +64,7 @@ attr_accessor :product, :description, :stock_quantity, :buying_cost, :selling_pr
     if @stock_quantity == 0
       return "Out of stock"
    elsif @stock_quantity <= 10 && @stock_quantity != 0
-      return "Low stock"
+      return "Low stock" 
     else
       return nil
    end

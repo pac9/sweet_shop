@@ -9,3 +9,12 @@ h1{
   color: brown;
   padding-top: 10px;
 }
+
+h3{
+  color: purple;
+}
+
+a{
+  text-decoration: none;
+  color: purple;
+}
