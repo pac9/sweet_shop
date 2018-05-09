@@ -31,6 +31,7 @@ end
 
 get '/suppliers/:id/delete' do
   @supplier = Supplier.find( params[:id] )
+  @products = @supplier.products
   erb ( :"suppliers/delete")
 end
 
@@ -38,7 +39,5 @@ post '/suppliers/:id/delete' do
   @products = Product.all
   @supplier = Supplier.find( params[:id] )
   @supplier.delete()
-  @supplier.products()
-
   redirect to("/suppliers")
 end
