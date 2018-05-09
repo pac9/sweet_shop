@@ -1,6 +1,7 @@
 require('sinatra')
 require('sinatra/contrib/all')
 require_relative('../models/supplier')
+require_relative('../models/product')
 
 get '/suppliers' do
   @suppliers = Supplier.all()
@@ -34,7 +35,9 @@ get '/suppliers/:id/delete' do
 end
 
 post '/suppliers/:id/delete' do
-  supplier = Supplier.find( params[:id] )
-  supplier.delete()
+  @products = Product.all
+  @supplier = Supplier.find( params[:id] )
+  @supplier.delete()
+  
   redirect to("/suppliers")
 end

@@ -32,7 +32,7 @@ class Supplier
   end
 
   def products()
-    sql = "SELECT * FROM products WHERE product_id = $1"
+    sql = "SELECT * FROM products WHERE supplier_id = $1"
     values = [@id]
     results = SqlRunner.run(sql, values)
     products = results.map{|product| Product.new(product)}

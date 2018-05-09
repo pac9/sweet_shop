@@ -3,3 +3,14 @@
 <form method="post" action="/suppliers/<%= @supplier.id %>/delete">
 <input type="submit" value="Delete supplier"/>
 </form>
+
+ <p>The following products need to be removed or supplier updated prior to deleting this supplier:</p>
+
+ <table>
+   <tr>
+     <th>Product</th>
+     <th>Stock</th>
+   </tr>
+
+
+    </table>
