@@ -14,6 +14,7 @@ get '/products/add' do
   erb ( :"products/add" )
 end
 
+
 post '/products' do
   @product = Product.new(params)
   @product.save()
@@ -29,6 +30,12 @@ end
 post '/products/:id' do
   Product.new( params ).update
   redirect to '/products'
+end
+
+get '/products/:id/delete' do
+  @product = Product.find( params[:id] )
+  @supplier = Supplier.all()
+  erb ( :"products/delete")
 end
 
 post '/products/:id/delete' do

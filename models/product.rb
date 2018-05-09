@@ -51,8 +51,7 @@ attr_accessor :product, :description, :stock_quantity, :buying_cost, :selling_pr
  end
 
  def delete()
-   sql = "DELETE FROM products
-     WHERE id = $1"
+   sql = "DELETE FROM products WHERE id = $1"
    values = [@id]
    SqlRunner.run(sql, values)
  end

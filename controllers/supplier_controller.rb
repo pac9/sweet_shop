@@ -27,3 +27,14 @@ post '/suppliers/:id' do
   Supplier.new( params ).update
   redirect to '/suppliers'
 end
+
+get '/suppliers/:id/delete' do
+  @supplier = Supplier.find( params[:id] )
+  erb ( :"suppliers/delete")
+end
+
+post '/suppliers/:id/delete' do
+  supplier = Supplier.find( params[:id] )
+  supplier.delete()
+  redirect to("/suppliers")
+end

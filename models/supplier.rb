@@ -39,6 +39,12 @@ class Supplier
     return products
   end
 
+  def delete()
+    sql = "DELETE FROM suppliers WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.all()
     sql = "SELECT * FROM suppliers"
     supplier_hashes = SqlRunner.run(sql)
@@ -62,13 +68,5 @@ class Supplier
     result = Supplier.new( supplier.first)
     return result
   end
-
-
-     #  def delete()
-     #   sql = "DELETE FROM suppliers
-     #     WHERE id = $1"
-     #   values = [@id]
-     #   supplier = SqlRunner.run(sql, values)
-     # end
 
 end
