@@ -2,29 +2,32 @@
 <html>
 <head>
   <title>Sweets like Chocolate</title>
-  <link rel="stylesheet" href="/tables.css">
-  <link rel="stylesheet" href="/structure.css">
+  <link rel="stylesheet" href="/styles/tables.css">
+  <link rel="stylesheet" href="/styles/structure.css">
+  <link rel="stylesheet" href="/styles/button.css">
+  <link rel="stylesheet" href="/images/low_stock.png">
 
 </head>
 <body>
   <h1>Sweets like Chocolate</h1>
+  <h3><%t= Time.now %>
+    <%= t.strftime("Status on %d/%m/%Y") %>
+    <%= t.strftime("at %I:%M%p") %>
+  </h3>
   <nav>
     <ul>
       <li>
-        <a href="/">Home</a>
+        <a class="btn" href="/">Home</a>
       </li>
       <li>
-        <a href="/products">Products</a>
+        <a class="btn" href="/products">Products</a>
       </li>
       <li>
-        <a href="/suppliers">Suppliers</a>
+        <a class="btn" href="/suppliers">Suppliers</a>
       </li>
     </ul>
   </nav>
-  <h1><%t= Time.now %>
-    <%= t.strftime("Status on %d/%m/%Y") %>
-    <%= t.strftime("at %I:%M%p") %>
-  </h1>
+
   <%= yield %>
 </body>
 </html>

@@ -56,6 +56,10 @@ attr_accessor :product, :description, :stock_quantity, :buying_cost, :selling_pr
    SqlRunner.run(sql, values)
  end
 
+ def mark_up()
+   return @selling_price - @buying_cost
+ end
+
  def self.all()
  sql = "SELECT * FROM products"
  product_hashes = SqlRunner.run(sql)
