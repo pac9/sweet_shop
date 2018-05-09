@@ -60,10 +60,20 @@ attr_accessor :product, :description, :stock_quantity, :buying_cost, :selling_pr
    return @selling_price - @buying_cost
  end
 
+ def stock_level
+    if @stock_quantity == 0
+      return "Out of stock"
+   elsif @stock_quantity <= 10 && @stock_quantity != 0
+      return "Low stock"
+    else
+      return nil
+   end
+ end
+
  def self.all()
- sql = "SELECT * FROM products"
- product_hashes = SqlRunner.run(sql)
- return Product.map_items(product_hashes)
+   sql = "SELECT * FROM products"
+   product_hashes = SqlRunner.run(sql)
+   return Product.map_items(product_hashes)
  end
 
  def self.map_items(product_hashes)
