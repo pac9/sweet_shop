@@ -16,6 +16,8 @@
 
     <th>Selling price (£)</th>
 
+    <th>Mark-up</th>
+
     <th>Supplier</th>
 
     <th>Stock level warnings</th>
@@ -33,6 +35,8 @@
     <td><%= product.buying_cost/100.round(2) %></td>
 
     <td><%= product.selling_price/100.round(2) %></td>
+
+    <td><%= (product.selling_price/100.round(2) - product.buying_cost/100.round(2)).round(2) %></td>
 
     <td><a href= "/suppliers"><%= product.supplier.name %></a></td>
 
