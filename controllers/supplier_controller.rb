@@ -38,6 +38,7 @@ post '/suppliers/:id/delete' do
   @products = Product.all
   @supplier = Supplier.find( params[:id] )
   @supplier.delete()
-  
+  @supplier.products()
+
   redirect to("/suppliers")
 end

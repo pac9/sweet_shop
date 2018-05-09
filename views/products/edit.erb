@@ -9,21 +9,21 @@
 
 
   <label for ="stock-quantity">Stock:</label>
-  <input type="number" name="stock_quantity" id="stock-quantity" value="<%= @product.stock_quantity %>"/>
+  <input type="number" name="stock_quantity" id="stock-quantity" value="<%= @product.stock_quantity %>" min="0"/>
 
 
   <label for ="buying-cost">Buying cost (pence):</label>
-  <input type="number" name="buying_cost" id="buying-cost" value="<%= @product.buying_cost %>"/>
+  <input type="number" name="buying_cost" id="buying-cost" value="<%= @product.buying_cost %>" min="0"/>
 
 
   <label for ="selling-price">Selling price (pence):</label>
-  <input type="number" name="selling_price" id="selling-price" value="<%= @product.selling_price %>"/>
+  <input type="number" name="selling_price" id="selling-price" value="<%= @product.selling_price %>" min="0"/>
 
   <label for ="supplier">Supplier:</label>
   <select name="supplier_id" id="supplier">
-     <% for supplier in @supplier %>
-   <option value=<%= supplier.id %>><%= supplier.name %></option>
-   <% end %>
+    <% for supplier in @supplier %>
+    <option value=<%= supplier.id %> <%= "selected" if supplier.id == @product.supplier_id %>><%= supplier.name %></option>
+    <% end %>
   </select>
 
   <input type="submit" value="Submit">
