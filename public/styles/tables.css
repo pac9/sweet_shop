@@ -11,3 +11,11 @@ th {
   padding: 10px 20px 10px 20px;
   border: 1px solid black;
 }
+
+.red{
+  background-color: red;
+}
+
+.number{
+  align-content: center;
+}

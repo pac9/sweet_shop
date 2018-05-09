@@ -30,13 +30,13 @@
 
     <td><%= product.description %></td>
 
-    <td><%= product.stock_quantity %></td>
+    <td class="number"><%= product.stock_quantity %></td>
 
-    <td><%= product.buying_cost/100.round(2) %></td>
+    <td class="number"><%= product.buying_cost/100.round(2) %></td>
 
-    <td><%= product.selling_price/100.round(2) %></td>
+    <td class="number"><%= product.selling_price/100.round(2) %></td>
 
-    <td><%= product.mark_up/100.round(2) %></td>
+    <td class="number"><%= product.mark_up/100.round(2) %></td>
 
     <td><a href= "/suppliers"><%= product.supplier.name %></a></td>
 
