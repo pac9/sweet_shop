@@ -1,14 +1,14 @@
 <p>Delete supplier: <%= @supplier.name %> </p>
 
 <p>Products supplied by supplier:</p>
-<ol>
+
+<ul>
 <% @products.each do |product| %>
 <p><%= product.product %></p>
-<% end  %>
-</ol>
-
-Please ensure all products previously supplied by this supplier have been removed from inventory prior to pressing the delete button.
+<% end %>
+</ul>
+<p>Please ensure all products previously supplied by this supplier have been removed from inventory prior to pressing the delete button.</p>
 
 <form method="post" action="/suppliers/<%= @supplier.id %>/delete">
-<input type="submit" value="Delete supplier"/>
+<input class="submit" type="submit" value="Delete supplier"/>
 </form>
