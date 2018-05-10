@@ -64,7 +64,7 @@ attr_accessor :product, :description, :stock_quantity, :buying_cost, :selling_pr
     if @stock_quantity == 0
       return "Out of stock"
    elsif @stock_quantity <= 10 && @stock_quantity != 0
-      return "Low stock" 
+      return "Low stock"
     else
       return nil
    end
@@ -77,21 +77,21 @@ attr_accessor :product, :description, :stock_quantity, :buying_cost, :selling_pr
  end
 
  def self.map_items(product_hashes)
- result = product_hashes.map {|product_hash| Product.new(product_hash) }
- return result
+   result = product_hashes.map {|product_hash| Product.new(product_hash) }
+   return result
  end
 
  def self.find(id)
- sql = "SELECT * FROM products WHERE id = $1"
- values = [id]
- product = SqlRunner.run( sql, values )
- result = Product.new( product.first)
- return result
+   sql = "SELECT * FROM products WHERE id = $1"
+   values = [id]
+   product = SqlRunner.run( sql, values )
+   result = Product.new( product.first)
+   return result
  end
 
  def self.delete_all
- sql = "DELETE FROM products"
- SqlRunner.run( sql )
+   sql = "DELETE FROM products"
+   SqlRunner.run( sql )
  end
 
 end

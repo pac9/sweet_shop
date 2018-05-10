@@ -26,7 +26,7 @@ class Supplier
   end
 
   def update()
-   sql = "UPDATE suppliers SET name = $1, telephone_number = $2 WHERE id = $3"
+    sql = "UPDATE suppliers SET name = $1, telephone_number = $2 WHERE id = $3"
     values = [@name, @telephone_number, @id]
     SqlRunner.run( sql, values )
   end
