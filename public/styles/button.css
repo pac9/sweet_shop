@@ -2,13 +2,29 @@
   border:0px none;
   border-radius: 3%;
   padding: 12px;
+
   color: brown;
   cursor:pointer;
 }
 
 .submit{
-  font-size: 1em;
+  font-size: 0.9em;
   background-color: brown;
   color: white;
   padding: 2px;
+}
+
+a.btn-add {
+
+
+  padding: 3px 10px;
+  color: brown;
+  cursor:pointer;
+
+  font-size: 15px;
+  font-style: normal;
+  border: 1px solid brown;
+
+
+
 }

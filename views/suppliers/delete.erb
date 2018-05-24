@@ -7,7 +7,9 @@
 <p><%= product.product %></p>
 <% end %>
 </ul>
-<p>Please ensure all products previously supplied by this supplier have been removed from inventory prior to pressing the delete button.</p>
+<p>Please ensure all products previously supplied by this supplier
+   have been removed from inventory or reallocated to a new supplier
+   prior to pressing the delete button.</p>
 
 <form method="post" action="/suppliers/<%= @supplier.id %>/delete">
 <input class="submit" type="submit" value="Delete supplier"/>

@@ -3,24 +3,32 @@
   <label for ="product-name">Product:</label>
   <input type="text" name="product" id="product-name" value="<%= @product.product %>"/>
   <br>
+  <br>
+
 
   <label for ="description">Description:</label>
   <input type="text" name="description" id="description" value="<%= @product.description %>"/>
   <br>
+  <br>
+
 
 
   <label for ="stock-quantity">Stock:</label>
   <input type="number" name="stock_quantity" id="stock-quantity" value="<%= @product.stock_quantity %>" min="0"/>
   <br>
+  <br>
+
 
 
   <label for ="buying-cost">Buying cost (pence):</label>
   <input type="number" name="buying_cost" id="buying-cost" value="<%= @product.buying_cost %>" min="0"/>
   <br>
+  <br>
 
 
   <label for ="selling-price">Selling price (pence):</label>
   <input type="number" name="selling_price" id="selling-price" value="<%= @product.selling_price %>" min="0"/>
+  <br>
   <br>
 
   <label for ="supplier">Supplier:</label>
@@ -29,6 +37,8 @@
     <option value=<%= supplier.id %> <%= "selected" if supplier.id == @product.supplier_id %>><%= supplier.name %></option>
     <% end %>
   </select>
+  <br>
+  <br>
 
   <input class="submit" type="submit" value="Submit">
 
