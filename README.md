@@ -3,6 +3,8 @@ Ruby, SQL, Sinatra - shop inventory system
 
 Project ‑ Web Programming with Ruby
 
+Solo project
+
 Over the next week you will build an app to consolidate and expand on everything you have learned:
 Object oriented programming with Ruby
 Test Driven Development
