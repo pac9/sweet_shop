@@ -1,5 +1,6 @@
-# sweet_shop
-Ruby, SQL, Sinatra, HTML, CSS, TDD - shop inventory system
+# Sweet shop stock inventory system
+
+Utilising - Ruby, SQL, Sinatra, HTML, CSS, TDD
 
 Project ‑ Web Programming with Ruby
 
