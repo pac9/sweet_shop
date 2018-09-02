@@ -1,8 +1,8 @@
 # Sweet shop stock inventory system
 
-Utilising - Ruby, SQL, Sinatra, HTML, CSS, TDD
-
 Project ‑ Web Programming with Ruby
+
+Utilising - Ruby, SQL, Sinatra, HTML, CSS, TDD
 
 Solo project
 
