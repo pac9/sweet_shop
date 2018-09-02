@@ -4,7 +4,7 @@ Project ‑ Web Programming with Ruby
 
 Utilising - Ruby, SQL, Sinatra, HTML, CSS, TDD
 
-### Solo project
+### Brief - Solo project
 
 Over the next week you will build an app to consolidate and expand on everything you have learned:
 Object oriented programming with Ruby
@@ -38,8 +38,7 @@ These briefs detail what is expected of you, including an MVP. Note that the MVP
 strongly encouraged to go beyond these specifications, and some possible extensions are provided.
 
 ### Shop Inventory
-Build an app which allows a shopkeeper to track their shop's inventory. This is not an app which the customer will see, it is
-an admin/management app for the shop workers.
+Build an app which allows a shopkeeper to track their shop's inventory. This is not an app which the customer will see, it is an admin/management app for the shop workers.
 
 ### MVP
 
