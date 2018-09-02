@@ -4,7 +4,7 @@ Project ‑ Web Programming with Ruby
 
 Utilising - Ruby, SQL, Sinatra, HTML, CSS, TDD
 
-Solo project
+### Solo project
 
 Over the next week you will build an app to consolidate and expand on everything you have learned:
 Object oriented programming with Ruby
@@ -12,7 +12,7 @@ Test Driven Development
 Web Programming (REST, MVC)
 Interacting with a PostgreSQL database (CRUD)
 
-Rules
+### Rules
 
 The project must be built using only:
 HTML / CSS
@@ -32,16 +32,16 @@ before.
 Make lots of little (but sensible!) git commits. The number of commits in your final submission is one of the criteria your
 work will be judged on.
 
-Briefs
+### Briefs
 
 These briefs detail what is expected of you, including an MVP. Note that the MVP is the Minimum Viable Product. You are
 strongly encouraged to go beyond these specifications, and some possible extensions are provided.
 
-Shop Inventory
+### Shop Inventory
 Build an app which allows a shopkeeper to track their shop's inventory. This is not an app which the customer will see, it is
 an admin/management app for the shop workers.
 
-MVP
+### MVP
 
 The inventory should track individual products, including a name, description, stock quantity, buying cost, and selling
 price.
