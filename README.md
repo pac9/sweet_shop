@@ -1,5 +1,5 @@
 # sweet_shop
-Ruby, SQL, Sinatra - shop inventory system
+Ruby, SQL, Sinatra, HTML, CSS - shop inventory system
 
 Project ‑ Web Programming with Ruby
 
